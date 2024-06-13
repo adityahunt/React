@@ -3,15 +3,19 @@ import './App.css'
 
 function App() {
 
-  let [counter,setcounter]=useState(15)
+  let [counter,setcounter]=useState(5)
 
   const addvalue=()=>{
-    counter=counter+1;
-    setcounter(counter);
+    if(counter<20){
+      counter=counter+1;
+      setcounter(counter);
+    }
   }
   const minusvalue=()=>{
-    counter=counter-1;
-    setcounter(counter)
+    if(counter>0){
+      counter=counter-1;
+      setcounter(counter)
+    }
   }
   return (
     <>
